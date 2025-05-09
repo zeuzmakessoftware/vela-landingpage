@@ -22,5 +22,37 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-dm-sans);
+}
+
+/* Carousel Animation Styles */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: carousel 20s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  margin-right: 1rem;
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover for better user experience */
+.carousel-container:hover .carousel-track {
+  animation-play-state: paused;
 }
