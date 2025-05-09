@@ -13,7 +13,10 @@ export default function Home() {
         <Image src="/Velalogo.svg" alt="Vela Logo" width={69} height={69} />
         <nav>
           <ul className="flex space-x-8 text-gray-700">
-            <li><a href="#" className="hover:text-gray-900">Home</a></li>
+            <li className="flex flex-col items-center">
+              <a href="#" className="text-blue-400 hover:text-blue-500">Home</a>
+              <div className="h-0.5 w-[145%] bg-blue-400 mt-1"></div>
+            </li>
             <li><a href="#pricing" className="hover:text-gray-900">Pricing</a></li>
             <li><a href="#about" className="hover:text-gray-900">About us</a></li>
             <li><a href="#team" className="hover:text-gray-900">Contact</a></li>
@@ -23,10 +26,10 @@ export default function Home() {
       </header>
       <main>
         <section className="text-center px-6 pt-20 pb-16">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 max-w-[90%] mx-auto">
             Build high-impact SEO pages at scale — no code, no dev team, <span className="text-blue-400">no hassle</span>.
           </h1>
-          <p className="max-w-2xl mx-auto text-lg text-gray-600 mb-8">
+          <p className="max-w-2xl mx-auto text-lg text-black mb-8 font-medium">
             Customize templates, connect your data, and publish thousands of SEO-optimized pages in minutes. Enjoy built-in internal linking, dynamic content generation, and seamless scalability designed to help your site grow fast and rank higher.
           </p>
           <button className="bg-blue-400 text-white px-6 py-3 rounded-lg  cursor-pointer hover:bg-blue-500">Book our free demo</button>
@@ -65,73 +68,127 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section id="pricing" className="px-6 py-16 bg-gray-50">
+        <Image src="/Line Break.svg" alt="Line Break" width={100} height={100} className="w-[60%] mx-auto py-6" />
+        <section id="pricing" className="px-6 py-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold">
+            <h2 className="text-4xl md:text-5xl font-bold max-w-[70%] mx-auto">
               Choose the Plan That Fits Your <span className="text-blue-400">Workflow</span>
             </h2>
-            <p className="max-w-xl mx-auto text-gray-600 mt-4">
+            <p className="max-w-xl mx-auto text-black font-medium mt-4 py-6">
               Whether you&apos;re just getting started or ready to launch thousands of pages, our flexible pricing grows with your needs. No hidden fees—just the features you need, when you need them.
             </p>
           </div>
           <div className="max-w-6xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-3">
-            <div className="bg-white p-6 rounded-lg shadow">
+            <div className="bg-white p-6 border-t-2 border-gray-300">
               <h3 className="text-xl font-semibold mb-4">Starter</h3>
-              <p className="text-4xl font-bold mb-2">$350<span className="text-lg font-normal">/month</span></p>
-              <p className="text-gray-600 mb-6">Great for solo marketers and early-stage projects testing programmatic SEO.</p>
+              <p className="text-5xl font-bold mb-2">$350<span className="text-lg font-normal ml-2">per month</span></p>
+              <p className="text-gray-600 mb-6 font-medium">Great for solo marketers and early-stage projects testing programmatic SEO.</p>
               <button className="w-full bg-blue-400 text-white py-2 rounded-lg mb-6 cursor-pointer hover:bg-blue-500">Get started</button>
               <ul className="space-y-2 text-gray-600 text-sm">
-                <li>Generate up to 1,000 pages</li>
-                <li>Connect a single data source</li>
-                <li>Drag-and-drop template builder</li>
-                <li>Set essential SEO elements</li>
-                <li>Responsive email support</li>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Generate up to 1,000 pages from your data with SEO best practices built in</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Connect a single data source like Google Sheets, Airtable, or CSV</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Use a visual, drag-and-drop builder to design reusable page templates</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Set essential SEO elements like page titles, meta descriptions, and structured data</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Get responsive email support when you need guidance or help</li>
+                </div>
               </ul>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow border-2 border-blue-400 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-400 text-white text-xs uppercase px-3 py-1 rounded-full">Most Popular</div>
+            <div className="bg-white p-6 border-t-2 border-gray-300 relative">
+              <div className="absolute -top-3 right-0 transform -translate-x-1/2 bg-blue-400 text-white text-sm px-3 py-1 rounded-full">Most Popular</div>
               <h3 className="text-xl font-semibold mb-4">Premium</h3>
-              <p className="text-4xl font-bold mb-2">$650<span className="text-lg font-normal">/month</span></p>
-              <p className="text-gray-600 mb-6">For teams ready to scale traffic with powerful customization and automation.</p>
+              <p className="text-5xl font-bold mb-2">$650<span className="text-lg font-normal ml-2">per month</span></p>              <p className="text-gray-600 mb-6 font-medium">For teams ready to scale traffic with powerful customization and automation.</p>
               <button className="w-full bg-blue-400 text-white py-2 rounded-lg mb-6 cursor-pointer hover:bg-blue-500">Get started</button>
               <ul className="space-y-2 text-gray-600 text-sm">
-                <li>Publish up to 10,000 pages</li>
-                <li>Large datasets across sources</li>
-                <li>Dynamic content mapping</li>
-                <li>Advanced SEO settings</li>
-                <li>Internal linking automation</li>
-                <li>Priority live chat support</li>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Publish up to 10,000 pages using large datasets across multiple sources</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Map dynamic content fields from various connected data platforms</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Control advanced SEO settings like canonical tags, index rules, and social previews</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Automate internal linking and keep sitemaps updated for better crawlability</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Access fast, priority support via live chat for quick troubleshooting</li>
+                </div>
               </ul>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow">
+            <div className="bg-white p-6 border-t-2 border-gray-300">
               <h3 className="text-xl font-semibold mb-4">Enterprise Solutions</h3>
-              <p className="text-4xl font-bold mb-2">$1,300<span className="text-lg font-normal">/month</span></p>
-              <p className="text-gray-600 mb-6">For teams ready to scale traffic with powerful customization and automation.</p>
+              <p className="text-5xl font-bold mb-2">$1300<span className="text-lg font-normal ml-2">per month</span></p>              <p className="text-gray-600 mb-6 font-medium">For teams ready to scale traffic with powerful customization and automation.</p>
               <button className="w-full bg-blue-400 text-white py-2 rounded-lg mb-6 cursor-pointer hover:bg-blue-500">Get started</button>
               <ul className="space-y-2 text-gray-600 text-sm">
-                <li>Unlimited pages</li>
-                <li>Flexible data integrations</li>
-                <li>API access & webhooks</li>
-                <li>Team roles & permissions</li>
-                <li>Dedicated success manager</li>
-                <li>SLA-backed support</li>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Create unlimited pages powered by flexible, scalable data integrations</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Integrate deeply via API access and webhooks to fit your existing stack</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Invite your team and assign roles with granular permissions</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Work with a dedicated success manager for onboarding and performance reviews</li>
+                </div>
+                <div className="flex items-center gap-4">
+                <li>-</li>
+                <li>Benefit from SLA-backed support with guaranteed response times</li>
+                </div>
               </ul>
             </div>
           </div>
         </section>
         <section id="about" className="relative px-6 py-20">
-          <span className="absolute text-blue-100 text-[200px] font-serif leading-none select-none" style={{ top: '20px', left: '20px' }}>V</span>
-          <div className="max-w-3xl mx-auto text-center relative">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Start with <span className="text-blue-400">Why Vela</span></h2>
-            <p className="text-gray-600 mb-6">
+          <div className="flex">
+          <div className="h-[350px] w-[30%] flex items-center justify-center">
+            <Image src="/V.svg" alt="Vela Logo" width={250} height={250} />
+          </div>
+          <div className="max-w-[65%] mx-auto relative">
+            <h5 className="bg-[#5EA7F93B] text-[#5EA7F9] py-1 max-w-[120px] my-2 text-center rounded-2xl">
+              About us
+            </h5>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">Start with <span className="text-blue-400">Why Vela</span></h2>
+            <p className="text-black text-lg mb-6 font-medium">
               We, part of Demian, believe organic growth shouldn&apos;t require a big engineering team. That&apos;s why we built a platform that makes programmatic SEO simple, fast, and accessible to anyone with a vision and some data.
             </p>
-            <p className="text-gray-600">
+            <p className="text-black text-lg font-medium">
               Our no-code tool turns structured data into thousands of SEO-ready pages, with everything from templates to publishing handled in one place.
             </p>
-            <p className="text-gray-600 mt-4">
+            <p className="text-black text-lg font-medium mt-4">
               Whether you&apos;re a solo marketer or scaling a startup, we remove the bottlenecks—so you can focus on strategy while we handle automation and optimization.
             </p>
+          </div>
+          </div>
+        </section>
+        <section>
+          <div className="flex items-center justify-center mt-20">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">insert footer here</h2>
           </div>
         </section>
       </main>
